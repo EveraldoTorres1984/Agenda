@@ -1,0 +1,47 @@
+<template>
+  <div id="nav">
+    <router-link to="/" id="logo-url">
+      <img :src="logo" :alt="alt" :id="logo" />
+    </router-link>
+    <router-link to="/">Home</router-link> 
+    <router-link to="/users">Users</router-link>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Navbar",
+  props: ["logo", "alt"],
+};
+</script>
+
+<style scoped>
+#nav {
+  background-color: 	#B0C4DE;
+  border-bottom: 3px solid #000080;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#nav #logo-url {
+  margin: auto;
+  margin-left: 0;
+}
+#logo {
+  width: 40px;
+  height: 40px;
+}
+#nav a {
+  color: #000080;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.5s;
+}
+#nav a:hover {
+  color: #fff;
+}
+img{
+  width: 30px;
+}
+</style>
