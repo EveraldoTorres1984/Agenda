@@ -5,7 +5,10 @@
   <Footer />
 </template>
 
+
+
 <script>
+
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
@@ -24,8 +27,11 @@ export default {
 </script>
 
 <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Rubik:wght@400;500&display=swap");
 * {
-  font-family: Helvetica, sans-serif;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
