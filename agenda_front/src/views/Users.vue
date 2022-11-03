@@ -1,17 +1,20 @@
 <template>
-  <div class="users main-container">
-    <h1>Página de usuários</h1>
-    <div v-for="user in users" :key="user.id">
-      <h3>{{ user.name }}</h3>
-      <div v-for="schedules in user.schedules" :key="schedules.id">
-        {{ schedules.title }}
-      </div>
-    </div>
+  <div class="container ">
+  <ScheduleForm/>
+
   </div>
 </template>
 
 <script>
+import ScheduleForm from "../components/ScheduleForm.vue"
+
 export default {
+
+  name:"Users",
+  components:{
+    ScheduleForm
+  },
+
   data() {
     return {
       users: [],
@@ -25,4 +28,6 @@ export default {
       });
   },
 };
+
+
 </script>
