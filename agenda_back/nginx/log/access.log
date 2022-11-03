@@ -160,3 +160,6 @@
 172.19.0.1 - - [31/Oct/2022:11:25:59 -0300] "GET /api/users HTTP/1.1" 200 13569 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" "-"
 172.19.0.1 - - [31/Oct/2022:11:42:08 -0300] "GET /api/users HTTP/1.1" 200 13563 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" "-"
 172.19.0.1 - - [31/Oct/2022:11:45:38 -0300] "GET /api/users HTTP/1.1" 200 13563 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" "-"
+172.19.0.1 - - [03/Nov/2022:10:48:36 -0300] "GET /api/users HTTP/1.1" 200 13563 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" "-"
+172.19.0.1 - - [03/Nov/2022:10:48:39 -0300] "GET /api/users HTTP/1.1" 200 13563 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" "-"
+172.19.0.1 - - [03/Nov/2022:11:40:41 -0300] "GET /api/users HTTP/1.1" 200 13563 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" "-"

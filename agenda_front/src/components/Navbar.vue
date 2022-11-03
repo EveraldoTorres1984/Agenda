@@ -17,8 +17,8 @@ export default {
 
 <style scoped>
 #nav {
-  background-color: 	#B0C4DE;
-  border-bottom: 3px solid #000080;
+  background-color: 	#1e90ff;
+  border-bottom: 3px solid #6495ED;
   padding: 15px 50px;
   display: flex;
   justify-content: flex-end;
@@ -31,6 +31,7 @@ export default {
 #logo {
   width: 40px;
   height: 40px;
+  
 }
 #nav a {
   color: #000080;
@@ -42,6 +43,6 @@ export default {
   color: #fff;
 }
 img{
-  width: 30px;
+  width: 30px;  
 }
 </style>
