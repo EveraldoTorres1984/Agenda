@@ -23,17 +23,17 @@
         <form class="form">
           <label class="label-input" for="">
             <fa icon="user" class="icon-modify" />
-            <input type="text" placeholder="Nome" />
+            <input type="text" v-model="name" placeholder="Nome" />
           </label>
 
           <label class="label-input" for="">
             <fa icon="envelope" class="icon-modify" />
-            <input type="email" placeholder="Email" />
+            <input type="email" v-model="email" placeholder="Email" />
           </label>
 
           <label class="label-input" for="">
             <fa icon="lock" class="icon-modify" />
-            <input type="password" placeholder="Senha" />
+            <input type="password" v-model="password" placeholder="Senha" />
           </label>
         </form>
         <button class="btn btn-second">Cadastrar</button>
@@ -42,7 +42,10 @@
   </div>
 </template>
 
-<script></script>
+<script>
+
+
+</script>
 
 <style scoped>
 .container {
