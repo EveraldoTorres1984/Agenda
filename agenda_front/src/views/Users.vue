@@ -1,7 +1,6 @@
 <template>
   <div class="container ">
   <ScheduleForm/>
-
   </div>
 </template>
 
@@ -27,7 +26,6 @@ export default {
         this.users = r;
       });
   },
+ 
 };
-
-
 </script>
