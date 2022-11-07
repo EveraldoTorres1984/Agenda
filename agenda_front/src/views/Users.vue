@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       schedules: [{
-        id:1, title: 'deu certo'
+        
       }],
     };
   },
