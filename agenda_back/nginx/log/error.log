@@ -470,3 +470,6 @@ Stack trace:
 2022/11/07 08:08:39 [notice] 1#1: start worker process 36
 2022/11/07 08:08:39 [notice] 1#1: start worker process 37
 2022/11/07 08:08:39 [notice] 1#1: start worker process 38
+2022/11/07 08:26:47 [warn] 31#31: *1 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 10.24.24.156, server: representante.karina.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "10.24.24.188"
+2022/11/07 08:26:47 [warn] 31#31: *3 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/2/00/0000000002 while reading upstream, client: 10.24.24.156, server: representante.karina.test, request: "GET /HNAP1/ HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "10.24.24.188"
+2022/11/07 08:34:46 [warn] 31#31: *24 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/3/00/0000000003 while reading upstream, client: 172.19.0.1, server: representante.karina.test, request: "GET /login HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost", referrer: "http://localhost:8080/"
