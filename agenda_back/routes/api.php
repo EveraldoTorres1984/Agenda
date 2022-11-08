@@ -12,3 +12,4 @@ Route::get('home', [UserController::class, 'index'])->middleware('auth');
 Route::post('register', [RegisterController::class, 'create']);
 
 Route::post('login', [AuthController::class, 'login']);
+
