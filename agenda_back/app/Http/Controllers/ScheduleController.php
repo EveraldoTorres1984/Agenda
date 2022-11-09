@@ -29,8 +29,13 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-       
+        $loggedId = Auth::id();
         
+        $schedules = Schedule::select("*")->where('user_id', $loggedId)->get();
+        
+        return response()->json($schedules);
+
+       
     }
 
     /**
