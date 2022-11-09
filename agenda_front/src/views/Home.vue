@@ -6,19 +6,26 @@
       <div class="card-body">
         <table class="table table-striped">
           <thead>
-            <tr>             
+            <tr>
               <th>Título</th>
-              <th>Descrição</th>
               <th>Data</th>
               <th>Horário</th>
+              <th>Descrição</th>
+              <th style="width:200px">Ações</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>titulo</td>
-              <td>descricao</td>
               <td>data</td>
               <td>horario</td>
+              <td>descricao</td>
+              <td>
+                <div class="btn-action">
+                  <button class="btn btn-warning" style="margin-right: 10px;">Editar</button>
+                  <button class="btn btn-danger">Excluir</button>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -36,13 +43,6 @@ export default {
     ScheduleForm,
   },
 
-  data() {
-    return {
-      schedules: [{
-        
-      }],
-    };
-  },
   created() {
     fetch("http://localhost/api/users")
       .then((response) => response.json())
@@ -52,3 +52,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card-body{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;  
+}
+
+button{
+  height: 30px;
+  font-size: 13px;  
+}
+
+</style>

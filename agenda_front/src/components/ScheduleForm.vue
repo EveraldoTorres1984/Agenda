@@ -8,15 +8,15 @@
         <input type="text" id="title" name="title" v-model="title" />
       </div>
       <div class="input-container">
-        <label for="title">Data:</label>
+        <label for="date">Data:</label>
         <input type="date" id="date" name="date" v-model="date" />
       </div>
       <div class="input-container">
-        <label for="title">Horário:</label>
+        <label for="time">Horário:</label>
         <input type="time" id="time" name="time" v-model="time" />
       </div>
       <div class="input-container">
-        <label for="title">Descrição:</label>
+        <label for="description">Descrição:</label>
         <textarea
           type="text"
           id="description"
@@ -34,6 +34,7 @@
 <script>
 export default {
   name: "ScheduleForm",
+  
 };
 </script>
 
