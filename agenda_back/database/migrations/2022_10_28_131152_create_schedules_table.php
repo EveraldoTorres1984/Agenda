@@ -18,7 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->string('title');
             $table->text('description')->nullable();
-            $table->dateTime('dateTime');
+            $table->date('date')->nullable();
+            $table->time('time')->nullable();
             $table->timestamps();
         });
     }
