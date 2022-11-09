@@ -14,4 +14,4 @@ Route::post('register', [RegisterController::class, 'create']);
 
 Route::post('login', [AuthController::class, 'login']);
 
-Route::post('create', [ScheduleController::class, 'create']);
+Route::post('create', [ScheduleController::class, 'create'])->middleware('auth');

@@ -2,10 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Schedule;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ScheduleController extends Controller
 {
+     /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'title' => ['required', 'string','min:2', 'max:50'],
+            'description' => [ 'string', 'max:255']           
+        ]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +29,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+       
+        
     }
 
     /**
@@ -21,9 +38,18 @@ class ScheduleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = $request->all();
+        $loggedId = Auth::id();
+
+        return Schedule::create([
+            'user_id' => $loggedId,
+            'title' => ucfirst($data['title']),
+            'date' => $data['date'],
+            'time' => $data['time'],
+            'description' => $data['description']
+        ]);
     }
 
     /**
