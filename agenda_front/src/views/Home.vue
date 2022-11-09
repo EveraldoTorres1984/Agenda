@@ -36,11 +36,20 @@
 
 <script>
 import ScheduleForm from "../components/ScheduleForm.vue";
+import axios from "axios";
 
 export default {
   name: "Home",
   components: {
-    ScheduleForm,
+    ScheduleForm,    
+  }, 
+  
+  methods: {
+    async getSchedules() {
+      const req = await axios.get('http://localhost/api/schedules');
+
+      const data 
+    },
   },
 
   created() {
