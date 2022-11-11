@@ -1,6 +1,14 @@
 <template>
   <Navbar :logo="logo_src" :alt="app_name" />
 
+
+<div>
+  <BaseAlert 
+    v-if="showAlert"
+  :variant="variant" @close="onClose()">
+  {{text}}
+  </BaseAlert>
+</div>
   <router-view />
   <Footer />
 </template>
@@ -8,7 +16,7 @@
 
 
 <script>
-
+import BaseAlert from '@/components/BaseAlert';
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
@@ -16,13 +24,23 @@ export default {
   components: {
     Navbar,
     Footer,
+    BaseAlert
   },
   data() {
     return {
+      showAlert: true,
       logo_src: "/img/agenda_logo.png",
       app_name: "Agenda Pessoal",
+      variant: "success",
+      text: 'formulario enviado teste'
     };
   },
+
+  methods:{
+    onClose(){
+      this.showAlert = false;
+    }
+  }
 };
 </script>
 

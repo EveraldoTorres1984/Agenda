@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <p>componente msg</p>
+  <div>   
 
     <form id="schedule-form">
       <div class="input-container">
@@ -15,7 +14,7 @@
         <label for="time">Horário:</label>
         <input type="time" id="time" name="time" v-model="form.time" />
       </div>
-      <div class="input-container">
+      <div class="input-container"> <router-view />
         <label for="description">Descrição:</label>
         <textarea
           type="text"
@@ -50,7 +49,9 @@ export default {
     },
 
     methods:{
-      submitForm(){
+      submitForm(e){
+        console.log(e);
+
         let token =  Cookies.get("_myapp_token");
 
         const config = {
@@ -60,7 +61,7 @@ export default {
         .post('http://localhost/api/create', this.form, config).then(function(){
            window.location = "/home";
         })
-      }
+      },
     }
   
 };

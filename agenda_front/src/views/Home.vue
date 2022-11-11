@@ -41,17 +41,10 @@ import axios from "axios";
 export default {
   name: "Home",
   components: {
-    ScheduleForm,    
-  }, 
+    ScheduleForm, 
+  },   
+
   
-  methods: {
-    async getSchedules() {
-      const req = await axios.get('http://localhost/api/schedules');
-
-      const data 
-    },
-  },
-
   created() {
     fetch("http://localhost/api/users")
       .then((response) => response.json())
@@ -59,7 +52,20 @@ export default {
         this.users = r;
       });
   },
+
+  methods: {
+    getSchedules() {
+      axios
+      .get('http://localhost/api/schedules').then(function(response){
+        console.log(response);
+      }).catch(function(response){
+        console.log(response);
+      })
+    },
+  },
+  
 };
+
 </script>
 
 <style scoped>
