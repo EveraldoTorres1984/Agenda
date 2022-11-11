@@ -2,8 +2,8 @@
     <div :class="baseClass">
      <slot/>
 
-     <button @click="onClick()">
-        X
+     <button style="width: 15px; background: transparent; border:none;" @click="onClick()">
+        x
      </button>
     </div>
 </template>

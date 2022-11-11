@@ -82,19 +82,21 @@ export default {
     VerifyLogin() {
       let self = this;
 
-      return new Promise(function (resolve, reject) {
-        axios
-          .post("http://localhost/api/login", {
+     console.log({
+            email: self.email,
+            password: self.password,
+          })
+        axios.post("http://localhost/api/login", {
             email: self.email,
             password: self.password,
           })
           .then(function (response) {
+            console.log(response);
             Cookies.set("_myapp_token", response.data.access_token);
           })
           .finally(function () {
-            window.location = "/home";
-          });
-      });
+            self.$router.push('/home');
+          });      
     },
   },
 };

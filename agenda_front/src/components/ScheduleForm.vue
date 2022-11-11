@@ -49,17 +49,17 @@ export default {
     },
 
     methods:{
-      submitForm(e){
-        console.log(e);
-
+      submitForm(){       
+        let self = this;
         let token =  Cookies.get("_myapp_token");
 
         const config = {
           headers: {Authorization : `Bearer ${token}`}
         }
         axios
-        .post('http://localhost/api/create', this.form, config).then(function(){
-           window.location = "/home";
+        .post('http://localhost/api/create', self.form, config).then(function(){
+           self.$emit('getSchedules');
+           self.form = {};
         })
       },
     }

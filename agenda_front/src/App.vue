@@ -32,7 +32,7 @@ export default {
       logo_src: "/img/agenda_logo.png",
       app_name: "Agenda Pessoal",
       variant: "success",
-      text: 'formulario enviado teste'
+      text: 'Agendamento feito com sucesso!'
     };
   },
 

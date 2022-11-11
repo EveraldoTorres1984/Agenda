@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ScheduleForm />
+    <ScheduleForm @getSchedules="getSchedules" />
 
     <div class="card mb-5">
       <div class="card-body">
@@ -15,11 +15,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>titulo</td>
-              <td>data</td>
-              <td>horario</td>
-              <td>descricao</td>
+            <tr v-for="task in tasks" :key="task.id">
+              <td>{{task.title}}</td>
+              <td>{{task.date}}</td>
+              <td>{{task.time}}</td>
+              <td>{{task.description}}</td>
               <td>
                 <div class="btn-action">
                   <button class="btn btn-warning" style="margin-right: 10px;">Editar</button>
@@ -37,8 +37,15 @@
 <script>
 import ScheduleForm from "../components/ScheduleForm.vue";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 export default {
+
+  data(){
+    return{
+      tasks:[]
+    }
+  },
   name: "Home",
   components: {
     ScheduleForm, 
@@ -46,23 +53,24 @@ export default {
 
   
   created() {
-    fetch("http://localhost/api/users")
-      .then((response) => response.json())
-      .then((r) => {
-        this.users = r;
-      });
+   this.getSchedules();
+
   },
 
   methods: {
     getSchedules() {
-      axios
-      .get('http://localhost/api/schedules').then(function(response){
-        console.log(response);
-      }).catch(function(response){
-        console.log(response);
-      })
+      
+      let token =  Cookies.get("_myapp_token");
+             const config = {
+          headers: {Authorization : `Bearer ${token}`}
+        }
+    axios.get("http://localhost/api/home", config)
+      .then((response) => {
+     this.tasks = response.data[0].schedules
+      });
+      }
     },
-  },
+  
   
 };
 
